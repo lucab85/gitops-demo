@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: https://github.com/example/gitops-demo.git
+    repoURL: https://github.com/lucab85/gitops-demo.git
     targetRevision: main
     path: environments/development
   destination:
