@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: web-app-development
+  namespace: argocd
+spec:
+  source:
+    repoURL: https://github.com/example/gitops-demo.git
+    targetRevision: main
+    path: environments/development
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: development
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
