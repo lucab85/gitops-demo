@@ -4,6 +4,7 @@ metadata:
   name: web-app-development
   namespace: argocd
 spec:
+  project: default
   source:
     repoURL: https://github.com/lucab85/gitops-demo.git
     targetRevision: main
